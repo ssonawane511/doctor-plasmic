@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "files",
@@ -41,6 +41,84 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/"
+        },
+        {
+          "id": "rhRLKA6pErpe",
+          "name": "Doctorcard",
+          "type": "managed",
+          "projectId": "2awYjQxaFuULphBNfdnqZC",
+          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicDoctorcard.jsx",
+          "importSpec": {
+            "modulePath": "Doctorcard.jsx"
+          },
+          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicDoctorcard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "JRftrR28OaNu",
+          "name": "Searchbard",
+          "type": "managed",
+          "projectId": "2awYjQxaFuULphBNfdnqZC",
+          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicSearchbard.jsx",
+          "importSpec": {
+            "modulePath": "Searchbard.jsx"
+          },
+          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicSearchbard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "8LItiVaJPPqK",
+          "name": "Option",
+          "type": "managed",
+          "projectId": "2awYjQxaFuULphBNfdnqZC",
+          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicOption.jsx",
+          "importSpec": {
+            "modulePath": "Option.jsx"
+          },
+          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicOption.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "fGoVKsk_ZHQf",
+          "name": "DoctorInfoCard",
+          "type": "managed",
+          "projectId": "2awYjQxaFuULphBNfdnqZC",
+          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicDoctorInfoCard.jsx",
+          "importSpec": {
+            "modulePath": "DoctorInfoCard.jsx"
+          },
+          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicDoctorInfoCard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "GF_ZKYfbWnr-",
+          "name": "Footer",
+          "type": "managed",
+          "projectId": "2awYjQxaFuULphBNfdnqZC",
+          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicFooter.jsx",
+          "importSpec": {
+            "modulePath": "Footer.jsx"
+          },
+          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicFooter.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "-S7e2iU6NsDm",
+          "name": "Header",
+          "type": "managed",
+          "projectId": "2awYjQxaFuULphBNfdnqZC",
+          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicHeader.jsx",
+          "importSpec": {
+            "modulePath": "Header.jsx"
+          },
+          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicHeader.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
