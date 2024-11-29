@@ -12,7 +12,8 @@ import * as React from "react";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import Doctorcard from "../../Doctorcard"; // plasmic-import: rhRLKA6pErpe/component
@@ -47,6 +48,28 @@ function PlasmicNewPage__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "doctors",
+        type: "private",
+        variableType: "array",
+        initFunc: ({ $props, $state, $queries, $ctx }) => [
+          { name: "sagar sonawane", role: "engineeer" },
+          { name: "sagar2 sonawane", role: "engineeer" },
+          { name: "sagar1 sonawane", role: "engineeer" }
+        ]
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
   return (
     <React.Fragment>
       <div className={projectcss.plasmic_page_wrapper}>
@@ -64,11 +87,58 @@ function PlasmicNewPage__RenderFunc(props) {
             sty.test
           )}
         >
-          <Doctorcard
-            data-plasmic-name={"doctorcard"}
-            data-plasmic-override={overrides.doctorcard}
-            className={classNames("__wab_instance", sty.doctorcard)}
-          />
+          {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+            (() => {
+              try {
+                return $state.doctors;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return [];
+                }
+                throw e;
+              }
+            })()
+          ).map((__plasmic_item_0, __plasmic_idx_0) => {
+            const currentItem = __plasmic_item_0;
+            const currentIndex = __plasmic_idx_0;
+            return (
+              <Doctorcard
+                data-plasmic-name={"doctorcard"}
+                data-plasmic-override={overrides.doctorcard}
+                className={classNames("__wab_instance", sty.doctorcard)}
+                docName={(() => {
+                  try {
+                    return currentItem.name;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return undefined;
+                    }
+                    throw e;
+                  }
+                })()}
+                doctorRole={(() => {
+                  try {
+                    return currentItem.role;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return undefined;
+                    }
+                    throw e;
+                  }
+                })()}
+                key={currentIndex}
+              />
+            );
+          })}
         </div>
       </div>
     </React.Fragment>

@@ -92,6 +92,21 @@ function PlasmicDoctorcard__RenderFunc(props) {
         ) {
           $steps["runCode"] = await $steps["runCode"];
         }
+        $steps["runInteractionProp"] = true
+          ? (() => {
+              const actionArgs = {};
+              return (({ eventRef, args }) => {
+                return eventRef?.(...(args ?? []));
+              })?.apply(null, [actionArgs]);
+            })()
+          : undefined;
+        if (
+          $steps["runInteractionProp"] != null &&
+          typeof $steps["runInteractionProp"] === "object" &&
+          typeof $steps["runInteractionProp"].then === "function"
+        ) {
+          $steps["runInteractionProp"] = await $steps["runInteractionProp"];
+        }
       }}
     >
       <div

@@ -3,7 +3,9 @@
     {
       "projectId": "2awYjQxaFuULphBNfdnqZC",
       "version": "latest",
-      "dependencies": {},
+      "dependencies": {
+        "szjgMQpPpxhmkjnaBvZQJG": "2.26.0"
+      },
       "lang": "js",
       "fileLocks": [
         {
@@ -159,12 +161,12 @@
         {
           "type": "renderModule",
           "assetId": "rhRLKA6pErpe",
-          "checksum": "4e0843cc6768d328492e1605f583d79c"
+          "checksum": "2a3e243fe0ef2599eaa886d336765018"
         },
         {
           "type": "cssRules",
           "assetId": "rhRLKA6pErpe",
-          "checksum": "4e0843cc6768d328492e1605f583d79c"
+          "checksum": "2a3e243fe0ef2599eaa886d336765018"
         },
         {
           "type": "renderModule",
@@ -215,21 +217,35 @@
           "type": "cssRules",
           "assetId": "-S7e2iU6NsDm",
           "checksum": "15fe745c5f8ad5f3e8ba966aa3b7d227"
+        },
+        {
+          "type": "renderModule",
+          "assetId": "57eeSfzprtYU",
+          "checksum": "2863f4ec9302277f5b881ce90f8c7510"
+        },
+        {
+          "type": "cssRules",
+          "assetId": "57eeSfzprtYU",
+          "checksum": "2863f4ec9302277f5b881ce90f8c7510"
         },
         {
           "assetId": "2awYjQxaFuULphBNfdnqZC",
           "type": "projectCss",
           "checksum": "8da83ee6078dd0ca67a22909ab459522"
-        },
+        }
+      ],
+      "codegenVersion": "0.0.1"
+    },
+    {
+      "projectId": "szjgMQpPpxhmkjnaBvZQJG",
+      "version": "2.26.0",
+      "dependencies": {},
+      "lang": "js",
+      "fileLocks": [
         {
-          "type": "renderModule",
-          "assetId": "57eeSfzprtYU",
-          "checksum": "e1a8b06b7a76b7113c8bb2434dda94d5"
-        },
-        {
-          "type": "cssRules",
-          "assetId": "57eeSfzprtYU",
-          "checksum": "e1a8b06b7a76b7113c8bb2434dda94d5"
+          "assetId": "szjgMQpPpxhmkjnaBvZQJG",
+          "type": "projectCss",
+          "checksum": "29b90e78e5c36e5dc978e0c572d9fc75"
         }
       ],
       "codegenVersion": "0.0.1"

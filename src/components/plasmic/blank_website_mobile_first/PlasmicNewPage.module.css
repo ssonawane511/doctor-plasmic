@@ -25,4 +25,5 @@
 .doctorcard:global(.__wab_instance) {
   max-width: 100%;
   width: 462px;
+  transform: translateX(0px) translateY(0px) translateZ(0px);
 }
