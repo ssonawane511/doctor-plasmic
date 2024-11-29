@@ -29,7 +29,7 @@ createPlasmicElementProxy;
 
 export const PlasmicDoctorcard__VariantProps = new Array();
 
-export const PlasmicDoctorcard__ArgProps = new Array();
+export const PlasmicDoctorcard__ArgProps = new Array("docName", "doctorRole");
 
 const $$ = {};
 
@@ -38,7 +38,10 @@ function PlasmicDoctorcard__RenderFunc(props) {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {},
+        {
+          docName: "DocName",
+          doctorRole: "Role"
+        },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -68,6 +71,28 @@ function PlasmicDoctorcard__RenderFunc(props) {
         projectcss.plasmic_tokens,
         sty.frame11
       )}
+      onClick={async event => {
+        const $steps = {};
+        $steps["runCode"] = true
+          ? (() => {
+              const actionArgs = {
+                customFunction: async () => {
+                  return console.log($props.docName);
+                }
+              };
+              return (({ customFunction }) => {
+                return customFunction();
+              })?.apply(null, [actionArgs]);
+            })()
+          : undefined;
+        if (
+          $steps["runCode"] != null &&
+          typeof $steps["runCode"] === "object" &&
+          typeof $steps["runCode"].then === "function"
+        ) {
+          $steps["runCode"] = await $steps["runCode"];
+        }
+      }}
     >
       <div
         data-plasmic-name={"frame16"}
@@ -117,7 +142,21 @@ function PlasmicDoctorcard__RenderFunc(props) {
                 sty.text__eyMwh
               )}
             >
-              {"Dr. Imran Syahir"}
+              <React.Fragment>
+                {(() => {
+                  try {
+                    return $props.docName;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "Dr. Imran Syahir";
+                    }
+                    throw e;
+                  }
+                })()}
+              </React.Fragment>
             </div>
             <div
               className={classNames(
@@ -126,7 +165,21 @@ function PlasmicDoctorcard__RenderFunc(props) {
                 sty.text__bqvA5
               )}
             >
-              {"General Doctor"}
+              <React.Fragment>
+                {(() => {
+                  try {
+                    return $props.doctorRole;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "General Doctor";
+                    }
+                    throw e;
+                  }
+                })()}
+              </React.Fragment>
             </div>
           </Stack__>
         </Stack__>

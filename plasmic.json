@@ -119,6 +119,20 @@
           "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicHeader.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "57eeSfzprtYU",
+          "name": "NewPage",
+          "type": "managed",
+          "projectId": "2awYjQxaFuULphBNfdnqZC",
+          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicNewPage.jsx",
+          "importSpec": {
+            "modulePath": "NewPage.jsx"
+          },
+          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicNewPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/test"
         }
       ],
       "icons": [
